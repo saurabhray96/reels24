@@ -1,0 +1,131 @@
+body {
+    background-color: black;
+    display: grid;
+    place-items: center;
+    height: 550px;
+
+}
+
+#boxt {
+    overflow: hidden;
+    width: 400px;
+    height: 400px;
+    background-color: rgb(0, 0, 0);
+border-radius: 50%;
+    place-items: center;
+    display: grid;
+    position: absolute;
+    border-top: 1px solid white;
+    border-right: 1px solid rgb(0, 0, 0);
+    animation: topBoxRotation 25s infinite linear;
+}
+@keyframes topBoxRotation {
+    0%{
+        transform: rotate(0deg);
+    }100%{
+        transform: rotate(360deg);
+    }
+}
+
+#back1 {
+display: none;
+    width: 200px;
+    height: 400px;
+    background: linear-gradient(to bottom, white, black, rgba(0, 0, 0, 0));
+    z-index: 1;
+    position: absolute;
+}
+
+#sun {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 50px 15px yellow;
+    background: radial-gradient(red, yellow);
+    position: relative;
+}
+
+#back2 {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    border-radius: 50%;
+    width: 399px;
+    height: 399px;
+    background-color: #000000;
+    z-index: 2;
+}
+
+#Earth {
+position: absolute;
+    width:35px;
+    height:35px;
+    background: radial-gradient(rgb(115, 0, 255), rgb(66, 159, 213));
+    box-shadow: 0px 0px 10px 5px rgb(113, 10, 203);
+   
+    border-radius: 50%;
+}
+
+#back1 {
+    animation: rotation 30s infinite linear;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+#planets {
+    position: absolute;
+    z-index: 3;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-color: #ac8e8e00;
+    animation: EarthRotation 25s infinite linear;
+}
+
+@keyframes EarthRotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+#moonBox{
+    width: 100px;
+    height: 100px;
+    border-top: 1px solid white;
+    border-right: 1px solid black;
+    margin-top: 0px;
+    margin-left: 280px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    animation: moonRotation 3s infinite linear;
+}
+@keyframes moonRotation {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+#moon{
+    box-shadow: 0px 0px 5px 2px white;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(232, 232, 232);
+    margin-top: -80px;
+    margin-left: 60px;
+}
